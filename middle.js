@@ -18,7 +18,7 @@ const assertArraysEqual = function(eqArrays) {
 }
 
 //assertArraysEqual();
-
+//NEED TO FIGURE OUT RETURN VALUE ~~~~~ SCOPE???
 const middle = function(arr) {
   //for (index of arr) {
     let middleValue = [];
