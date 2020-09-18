@@ -16,8 +16,6 @@ const assertEqual = function(actual, expected) {
 //if they don't match return false
 
 const eqArrays = function(oneArray, twoArray) {
-      //return oneArray.toString() === twoArray.toString();
-      //return oneArray.join() === twoArray.join();
   for (let i = 0; i < oneArray.length; i++) {
     if (oneArray.length !== twoArray.length || oneArray[i] !== twoArray[i]) {
       return false;
