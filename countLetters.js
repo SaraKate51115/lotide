@@ -16,12 +16,11 @@ const countLetters = function(sentence) {
     counts[letter] = count ? count + 1 : 1; //figure out what this is doing???
  }
     
-    for (letter in counts) {
-      console.log(letter + counts[letter]); 
+    for (const letter in counts) {
+      if (letter !== ' ') {
+        console.log(`${letter}: ${counts[letter]}`); 
+      }
     }
-    
   };
 
 countLetters("lighthouse in the house");
-
-//HOW DO I STOP COUNTING SPACES???
