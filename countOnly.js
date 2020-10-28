@@ -1,3 +1,4 @@
+//TEST/ASSERTION FUNCTION~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const assertEqual = function(actual, expected) {
   if (expected === actual) {
     console.log(`🌈🌈🌈 Assertion Passed: ${actual} === ${expected}`);
@@ -6,20 +7,16 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-
-// allItems: an array of strings that we need to look through
-// itemsToCount: an object specifying what to count
+//ACTUAL FUNCTION~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const countOnly = function(allItems, itemsToCount) {
   const results = {};
-  //return results;
   
-  for (const item of allItems) { // scan the entire list in order to find all the 'Jason's'
-    console.log(item);
+  for (const item of allItems) { // scan the entire list
+   
     if (itemsToCount[item]) {
       //inside the loop
-      if (results[item]) {   //increment the counter  for each item:
-        results[item] += 1;// set a property with that string key to:
-      //  the value that was already there (or zero if nothing there) with 1 added to it.
+      if (results[item]) {   
+        results[item] += 1;
       } else {
         results[item] = 1;
       }
@@ -28,6 +25,7 @@ const countOnly = function(allItems, itemsToCount) {
   return results;
 };
 
+//TEST CODE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const firstNames = [
   "Karl",
   "Salima",
