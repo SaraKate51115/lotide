@@ -8,7 +8,7 @@ const eqArrays = function(oneArray, twoArray) {
 }
 
 const assertArraysEqual = function(eqArrays) {
- if (false) {
+ if (eqArrays === false) {
   //console.log(`🌈🌈🌈 Assertion Passed`);
   console.log(`😱😱😱 Assertion Failed`);
   } else {
