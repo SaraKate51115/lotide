@@ -1,12 +1,22 @@
-// FUNCTION IMPLEMENTATION
-const assertEqual = function(actual, expected) {
-  if (expected === actual) {
-    console.log(`🌈🌈🌈 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`😱😱😱 Assertion Failed: ${actual} !== ${expected}`);
+//TES/ASSERTION FUNCTIONS
+const eqArrays = function(oneArray, twoArray) {
+  for (let i = 0; i < oneArray.length; i++) {
+    if (oneArray.length !== twoArray.length || oneArray[i] !== twoArray[i]) {
+      return false;
+    }  
   }
-};
+  return true;
+}
 
+const assertArraysEqual = function(eqArrays) {
+ if (eqArrays === false) {
+  console.log(`😱😱😱 Assertion Failed`);
+  } else {
+  console.log(`🌈🌈🌈 Assertion Passed`);
+    }
+}
+
+// FUNCTION IMPLEMENTATION
 const findKey = function(object, callback) {
   const results = [];
   for (let key in object) { //selects keys
@@ -15,7 +25,6 @@ const findKey = function(object, callback) {
       results.push(key);
       break;
     }
-  
   }
   return results;
 };
@@ -30,3 +39,7 @@ const object = {
 };
 const results1 = findKey(object, x => x.stars === 1)
 console.log(results1);
+
+//TES CODE
+console.log(assertArraysEqual(eqArrays(results1, ['Blue Hill'])));
+console.log(assertArraysEqual(eqArrays(results1, ['Nope'])));
