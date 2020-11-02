@@ -1,3 +1,4 @@
+//TEST/ASSERTION FUNCTIONS
 const eqArrays = require('./eqArrays');
 
 //FUNCTION IMPLEMENTATION
@@ -11,6 +12,6 @@ const assertArraysEqual = function(eqArrays) {
     }
 }
 assertArraysEqual();
-//
+
 module.exports = eqArrays;
 module.exports = assertArraysEqual
